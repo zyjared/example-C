@@ -5,6 +5,7 @@ def delete_files_by_regex(folder_path, regex_list, root_folder_path='.'):
     for filename in os.listdir(folder_path):
         if os.path.isdir(os.path.join(folder_path, filename)):
             delete_files_by_regex(os.path.join(folder_path, filename), regex_list, root_folder_path)
+
         file_path = os.path.join(folder_path, filename)
         relative_path = os.path.relpath(file_path, root_folder_path)
         for regex_pattern in regex_list:
@@ -16,7 +17,7 @@ def delete_files_by_regex(folder_path, regex_list, root_folder_path='.'):
                     print(f"Error deleting {relative_path}: {e}")
 
 if __name__ == "__main__":
-    _folder_path = 'C:\\Users\\jiang\\Projects\\example-C\\经典示例'
+    _folder_path = '经典示例'
     regex_list = [r'.*\.(exe|EXE)$',r'.*\.(dat|DAT)$']
 
     delete_files_by_regex(_folder_path, regex_list)
