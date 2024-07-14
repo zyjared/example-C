@@ -96,5 +96,6 @@ cmake ..
 
 cd ..
 
-make
+mingw32-make
+# make 命令无效时，使用 mingw32-make
 ```
