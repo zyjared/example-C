@@ -1,10 +1,10 @@
-# 运行报错的情况
+# 多文件编译
 
 > [!IMPORTANT]
 >
 > 为了方便，此处我在 `main.c` 中引入了 `print.c`，但这不是推荐的做法，请参考 [第一种：引入头文件](#第一种：直接运行)。
 
-## 第一种：引入头文件
+## 第一种：gcc
 
 在 `main.c` 中，引入 `print.h`
 
@@ -48,11 +48,13 @@ int main(void){
 }
 ```
 
-## 其他
+## 使用 Makefile 和 CMake
 
-### makefile
+如果变得复杂，可以使用。
 
-该目录已创建了 `makefile`：
+### Makefile
+
+文件 `Makefile`
 
 ```makefile
 objects = main.o print.o
@@ -71,6 +73,8 @@ print.o: print.c print.h
 
 ### CMakeLists.txt
 
+文件 `CMakeLists.txt`
+
 ```txt
 cmake_minimum_required(VERSION 3.20)
 
@@ -83,7 +87,7 @@ add_executable(main main.c print.c)
 
 > [CMake Usage](https://cmake.org/cmake/help/book/mastering-cmake/chapter/Getting%20Started.html)
 
-### 完整命令
+### 命令
 
 当配置好之后
 
