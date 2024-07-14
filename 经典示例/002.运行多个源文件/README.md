@@ -32,7 +32,7 @@ gcc -o main main.c print.c
 
 ## 第二种：直接运行
 
-> [!DANGER]
+> [!WARNING]
 >
 > 不推荐的引入，可能会导致重复定义
 
