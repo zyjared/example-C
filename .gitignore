@@ -1,5 +1,5 @@
 .vscode/
 *.exe
 *.EXE
-tempfile.exe
-TCTEMP.DAT
+*.DAT
+*.dat
