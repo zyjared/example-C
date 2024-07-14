@@ -1,4 +1,4 @@
-#include "print.h"
+#include "print.c"
 
 int main(void){
 	printHello();
