@@ -18,6 +18,6 @@ def delete_files_by_regex(folder_path, regex_list, root_folder_path='.'):
 
 if __name__ == "__main__":
     _folder_path = '经典示例'
-    regex_list = [r'.*\.(exe|EXE)$',r'.*\.(dat|DAT)$']
+    regex_list = [r'.*\.(exe|EXE|dat|DAT)$']
 
     delete_files_by_regex(_folder_path, regex_list)
