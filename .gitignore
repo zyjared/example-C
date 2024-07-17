@@ -3,3 +3,7 @@
 *.EXE
 *.DAT
 *.dat
+*.o
+
+build/
+tempCodeRunnerFile.c
